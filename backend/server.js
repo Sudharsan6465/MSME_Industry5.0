@@ -1,12 +1,15 @@
-const express=require('express')
+
+require("dotenv").config();
+
+const app = require("./app");
+const connectDB = require("./config/db");
+
+const PORT = process.env.PORT || 5000;
 
 
-const app=express()
+connectDB();
 
-const PORT=3000
 
-app.get('/api',(req,res)=>{
-    res.json({message:"This text from the Node Server.... "})
-})
-
-app.listen(PORT,()=>{console.log("The server is now running...")})
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+});
