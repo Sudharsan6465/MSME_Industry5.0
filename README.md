@@ -1,119 +1,416 @@
-# Project Title 🚀
+# 🚀 MSME Smart Maintenance Platform
 
-A brief, one-sentence description of what this project does and who it is for.
+> **An AI-Powered Industry 5.0 Knowledge Management & Predictive Maintenance Platform for MSMEs**
 
----
-
-## 📋 Table of Contents
-
-- [About the Project](#about-the-project)
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+![MERN](https://img.shields.io/badge/Stack-MERN-green)
+![AI](https://img.shields.io/badge/AI-Gemini-blue)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+![Status](https://img.shields.io/badge/Status-MVP-orange)
 
 ---
 
-## ℹ️ About the Project
+## 📖 Overview
 
-Provide a detailed paragraph describing your project. Explain the problem it solves, why you built it, and how it works under the hood. 
+The **MSME Smart Maintenance Platform** is a web-based application designed to help Micro, Small, and Medium Enterprises (MSMEs) digitize their maintenance process using **AI**, **QR Code technology**, and a centralized **Knowledge Management System**.
 
-### Built With
-
-List the primary frameworks, libraries, and languages used in your project:
-* [Next.js](https://nextjs.org)
-* [React.js](https://reactjs.org)
-* [Tailwind CSS](https://tailwindcss.com)
+The platform enables workers to quickly report machine issues by scanning QR codes, receive AI-generated fault analysis and Standard Operating Procedures (SOPs), and build a searchable knowledge base for future maintenance.
 
 ---
 
-## ✨ Features
+## 🎯 Problem Statement
 
-* **Real-time Data Syncing** - Instantly updates user states.
-* **Responsive Design** - Works perfectly on mobile, tablet, and desktop views.
-* **Dark Mode Support** - Fully compatible with systemic appearance choices.
+Many MSMEs still rely on manual maintenance records and technician experience, resulting in:
+
+* ❌ Slow issue reporting
+* ❌ Repeated troubleshooting
+* ❌ Lack of centralized knowledge
+* ❌ Increased machine downtime
+* ❌ No standardized repair procedures
 
 ---
 
-## 🚀 Getting Started
+## 💡 Solution
 
-Follow these simple steps to set up a local copy of the project for development and testing.
+Our platform provides:
 
-### Prerequisites
+* QR Code based machine identification
+* Digital issue reporting
+* AI-powered fault diagnosis
+* Automatic SOP generation
+* Knowledge base management
+* Maintenance dashboard
+* Historical maintenance records
 
-List the software and versions required to run the application:
-```bash
-npm install npm@latest -g
+---
+
+# ✨ Features
+
+### 🔐 Authentication
+
+* Secure Login & Registration
+* JWT Authentication
+* Role-Based Access Control
+
+Roles:
+
+* 👷 Worker
+* 🛠 Maintenance Engineer
+* 👨‍💼 Supervisor
+* 👑 Admin
+
+---
+
+### 🏭 Machine Management
+
+* Add Machine
+* Edit Machine
+* Delete Machine
+* Machine Status
+* Department Management
+
+---
+
+### 📱 QR Code Integration
+
+Each machine receives a unique QR Code.
+
+Scanning the QR Code will:
+
+* Open machine profile
+* Show maintenance history
+* Display previous issues
+* Create new issue report
+
+---
+
+### 📝 Smart Issue Reporting
+
+Workers can:
+
+* Scan QR Code
+* Upload machine image
+* Describe issue
+* Set priority
+* Submit maintenance request
+
+---
+
+### 🤖 AI Fault Analysis
+
+Using Gemini AI
+
+The system generates:
+
+* Possible Fault
+* Root Cause
+* Severity
+* Safety Precautions
+* Recommended Actions
+
+---
+
+### 📄 AI SOP Generator
+
+Generate repair procedures automatically.
+
+Includes:
+
+* Repair Steps
+* Required Tools
+* Safety Instructions
+* Estimated Repair Time
+
+---
+
+### 📚 Knowledge Base
+
+Search previous maintenance records by:
+
+* Machine
+* Department
+* Issue
+* Keywords
+
+---
+
+### 📊 Dashboard
+
+Real-time statistics
+
+* Total Machines
+* Open Issues
+* Closed Issues
+* Most Frequent Faults
+* Machine Health Overview
+
+---
+
+## 🏗 System Architecture
+
+```text
+Worker
+    │
+    ▼
+Scan QR Code
+    │
+    ▼
+Machine Details
+    │
+    ▼
+Issue Reporting
+    │
+    ▼
+AI Analysis
+    │
+    ▼
+SOP Generation
+    │
+    ▼
+Knowledge Base
+    │
+    ▼
+Dashboard
 ```
 
-### Installation
+---
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd repo_name
-   ```
-3. Install the dependencies:
-   ```bash
-   npm install
-   ```
-4. Set up your environment variables in a `.env` file:
-   ```env
-   API_KEY=your_secret_key_here
-   ```
+# 🛠 Tech Stack
+
+## Frontend
+
+* React.js
+* Vite
+* Tailwind CSS
+* React Router
+* Axios
+* Recharts
 
 ---
 
-## 💻 Usage
+## Backend
 
-Provide concrete examples of how to run and use the project. Include code snippets for common commands:
+* Node.js
+* Express.js
+* JWT Authentication
+* Multer
+
+---
+
+## Database
+
+* MongoDB Atlas
+* Mongoose
+
+---
+
+## AI
+
+* Google Gemini API
+
+---
+
+## Cloud
+
+* Vercel
+* Render
+* Cloudinary
+
+---
+
+# 📂 Project Structure
+
+```
+msme-smart-maintenance
+
+│
+
+├── frontend
+│   ├── src
+│   ├── components
+│   ├── pages
+│   ├── services
+│   └── assets
+│
+├── backend
+│   ├── controllers
+│   ├── routes
+│   ├── middleware
+│   ├── models
+│   ├── config
+│   ├── uploads
+│   └── utils
+│
+├── docs
+│
+└── README.md
+```
+
+---
+
+# 👨‍💻 Team Members
+
+| Member   | Role                                |
+| -------- | ----------------------------------- |
+| Member 1 | Team Lead & Authentication          |
+| Member 2 | Frontend & Dashboard                |
+| Member 3 | Backend, Database & QR Module       |
+| Member 4 | AI Integration & Knowledge Base     |
+| Member 5 | Testing, Deployment & Documentation |
+
+---
+
+# 🚀 Installation
+
+## Clone Repository
 
 ```bash
-# Start the local development server
+git clone https://github.com/yourusername/msme-smart-maintenance.git
+```
+
+---
+
+## Install Frontend
+
+```bash
+cd frontend
+npm install
 npm run dev
 ```
 
-*For more complex implementations, please refer to the [Documentation](https://example.com).*
+---
+
+## Install Backend
+
+```bash
+cd backend
+npm install
+npm run dev
+```
 
 ---
 
-## 🗺️ Roadmap
+## Environment Variables
 
-- [x] Initial release of the Core API
-- [x] Add user authentication
-- [ ] Implement multi-language support (i18n)
-- [ ] Launch mobile application (iOS & Android)
+Create a `.env` file inside the backend folder.
+
+```env
+PORT=5000
+
+MONGO_URI=your_mongodb_connection
+
+JWT_SECRET=your_secret_key
+
+GEMINI_API_KEY=your_api_key
+
+CLOUDINARY_CLOUD_NAME=
+
+CLOUDINARY_API_KEY=
+
+CLOUDINARY_API_SECRET=
+```
 
 ---
 
-## 🤝 Contributing
+# 📌 API Endpoints
 
-Contributions make the open-source community an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+## Authentication
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+```
+POST /api/auth/register
+
+POST /api/auth/login
+
+GET /api/auth/profile
+```
+
+---
+
+## Machine
+
+```
+GET /api/machines
+
+POST /api/machines
+
+PUT /api/machines/:id
+
+DELETE /api/machines/:id
+```
+
+---
+
+## Reports
+
+```
+GET /api/reports
+
+POST /api/reports
+
+PUT /api/reports/:id
+```
+
+---
+
+## AI
+
+```
+POST /api/ai/analyze
+
+POST /api/ai/sop
+
+POST /api/ai/rootcause
+```
+
+---
+
+# 📈 Future Enhancements
+
+* Voice-based issue reporting
+* Predictive Maintenance
+* IoT Sensor Integration
+* Email Notifications
+* Mobile Application
+* Multi-language Support
+* AI Chat Assistant
+
+---
+
+# 📅 Development Roadmap
+
+* ✅ Authentication
+* ✅ Machine Management
+* ✅ QR Code Integration
+* ⏳ AI Fault Analysis
+* ⏳ SOP Generator
+* ⏳ Dashboard
+* ⏳ Knowledge Base
+* ⏳ Deployment
+
+---
+
+# 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push your branch
 5. Open a Pull Request
 
 ---
 
-## 📄 License
+# 📄 License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+This project is licensed under the MIT License.
 
 ---
 
-## ✉️ Contact
+# ⭐ Acknowledgements
 
-Your Name - [@your_twitter](https://twitter.com) - email@example.com
+* MSME College Screening Program
+* MERN Stack Community
+* Google Gemini API
+* Open Source Contributors
 
-Project Link: [https://github.com](https://github.com)
+---
+
+## ❤️ Built with MERN + AI for Industry 5.0
